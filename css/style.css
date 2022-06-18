@@ -26,6 +26,11 @@
     border-radius: 25px;
 }
 
+.rad-logo img{
+    border-radius: 50%;
+    background-color: var(--color-button);
+}
+
 .text-center{
     text-align: center;
 }
@@ -39,17 +44,29 @@
     max-width: 1300px;
 }
 
+.col-white{
+    color: var(--white-color);
+}
+
+.bord-green{
+    border-left: 2px solid var(--color-border);
+}
+
+.column-dir{
+    flex-direction: column;
+}
+
 
 /*REGOLE MAIN CONTENT*/
 
 .main-container{
-    height: 85vh;
+    height: 90vh;
     background-color: var(--black-color);
 }
 
 
 .main-container .content{
-    width: 82%;
+    width: 1060px;
     background-color: var(--primary-color);
     overflow-y: scroll;
 }
@@ -98,9 +115,10 @@
     margin:1.5rem 1.5rem;
 }
 
-.box-content span{
+span{
     color: var(--text-color-gray);
-    margin:0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .box-content .cards{
@@ -119,11 +137,8 @@
 
 .card h3{
     margin: 0.3rem 0;
-    color: var(--white-color);
-}
-
-.card span{
     font-size: 0.8rem;
+    color: var(--white-color);
 }
 
 .bord-rad{
@@ -136,9 +151,8 @@
 /*REGOLE SIDEBAR*/
 
 .main-container .sidebar{
-    width: 20%;
+    width: 240px;
     background-color: var(--black-color);
-    flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
 }
@@ -146,13 +160,26 @@
 .icon-logo{
     width: 20px;
     height: 20px;
+    margin-right: 2px;
 }
 
-.sidebar li{
-    margin: 0.3rem 0.5rem 0 0.5rem;
-    padding-top: 0.5rem;
+.icon-logo2{
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+}
+
+.sidebar-logo{
+    padding: 0;
+}
+
+.sidebar-logo li{
+    padding-left: 1rem;
+    margin-top: 0.6rem ;
     color: var(--text-color-gray);
     list-style: none;
+    font-size: 0.8rem;
+    font-weight: 800;
 }
 
 .logo-none{
@@ -161,8 +188,7 @@
 
 .sidebar .logo-spot img{
     width: 50%;
-    padding-bottom: 2rem;
-    line-height: 21px;
+    padding-bottom: 1rem;
 }
 
 .sidebar .icon-logo img{
@@ -184,6 +210,28 @@
     transform: translate(-50%, -50%);
 }
 
+.sidebar-bottom{
+    margin:0 1rem 0 0.5rem;
+    position: sticky;
+    bottom: 0;
+}
+
+
+.sidebar-bottom .bord-bot{
+    margin-top: 5rem ;
+    list-style: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+}
+
+.sidebar-bottom .text-bott{
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+
+
 
 
 
@@ -196,12 +244,32 @@
 
 
 .nav-footer{
-    height: 15vh;
+    height: 10vh;
     background-color: var(--color-foot);
     position: sticky;
     bottom: 0;
+    justify-content: space-between;
 }
 
+
+.foot-top, .foot-center, .foot-bottom{
+    width: calc(100% / 3 - 1.5rem);
+    padding: 0 0.75rem;
+    margin: 0.8rem 0;
+    background-color: aqua;
+}
+
+.box-footer{
+    border: 1px solid black;
+    width: calc(100% / 2 - 1.5rem);
+    margin: 0.3rem 0.75rem 0.3rem 0.75rem;
+}
+
+.box-footer2{
+    border: 1px solid black;
+    width: calc(100% / 4 - 1.5rem);
+    margin: 0.3rem 0.75rem 0.3rem 0.75rem;
+}
 
 
 
@@ -312,18 +380,19 @@
         flex-direction: column;
     }
 
+    .content{
+        width: 70%;
+    }
+
     .box-content .padd-spna{
         text-align: left;
         margin-left: 23px;
         display: block;
     }
 
-    .sidebar{
-        width: 0%;
-    }
-
-    .sidebar li{
-        margin:0 0 0 1rem;
+    .main-container .sidebar{
+        width: 30%;
+        overflow-y: none;
     }
 
     .icon-logo, .logo-none{
@@ -333,9 +402,6 @@
     .text-block{
         display: none;
     }
-
-
- 
 }
 
 /*S*/
