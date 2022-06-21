@@ -75,6 +75,8 @@
 
 .main-container .content{
     width: 100%;
+    min-height: 460px;
+    padding-bottom: 2rem;
     background-color: var(--primary-color);
     overflow-y: scroll;
 }
@@ -195,12 +197,13 @@ span{
 
 .main-container .sidebar{
     width: 18%;
+    min-height: 460px;
     flex-shrink: 0;
     background-color: var(--black-color);
 }
 
 .sidebar-logo{
-    padding-left: 0.7rem;
+    padding-left: 0.5rem;
     margin-top: 0.5rem;
 }
 
@@ -243,6 +246,10 @@ span{
     vertical-align: middle;
 }
 
+.sidebar-center{
+    min-height: 84px;
+}
+
 .sidebar-center li{
     padding-left: 0.5rem;
     margin-top: 0.5rem ;
@@ -272,7 +279,7 @@ span{
     padding-left: 0.5rem;
     margin-top: 0.7rem;
     color: var(--text-color-gray);
-    overflow: scroll;
+    overflow-y: hidden;
 }
 
 .sidebar-playlist h2{
@@ -288,17 +295,19 @@ span{
     font-size: 0.9rem;
     padding-bottom: 1rem;
     list-style: none;
+    overflow-y: auto;
 }
 
 .sidebar-bottom{
-    margin:0 1rem 1rem 0.5rem;
     position: fixed;
-    z-index: 990;
-    bottom: 0%;
     left: 0%;
-    padding-bottom: 3rem;
+    bottom: 0;
+    z-index: 989;
+    width: 18%;
+    padding-bottom: 5rem;
     background-color: var(--black-color);
 }
+
 
 .sidebar-bottom .bord-bot{
     margin-top: 1.5rem ;
@@ -418,166 +427,7 @@ span{
     margin-right: 8px;
 }
 
-
-/*REGOLE HOVER*/
-
-/*REGOLE HOVER SIDERBAR*/
-
-.sidebar li:hover{
-    color: var(--white-color);
-}
-
-.sidebar span:hover{
-    color: var(--white-color);
-}
-
-.sidebar-playlist .square:hover{
-    background-color: var(--white-color);
-    color: var(--black-color);
-}
-
-.bord-green-hov:hover{
-    border-left: 2px solid var(--color-border) !important;
-}
-
-/*REGOLE HOVER CONTENT*/
-
-.btn-black:hover{
-    opacity: 0.4;
-}
-
-.side-content li a:hover{
-    color: var(--white-color);
-}
-
-.side-content li:hover .border4{
-    background-color: var(--color-border);
-}
-
-
-/*REGOLE HOVER FOOTER*/
-
-.border:hover .border-backcol{
-    background-color: var(--color-border);
-}
-
-.border:hover .ball-border{
-    background-color: var(--color-border);
-    display: block;
-}
-
-.border2:hover .border-backcol{
-    background-color: var(--color-border);
-}
-
-.border2:hover .ball-border{
-    background-color: var(--color-border);
-    display: block;
-}
-
-.foot-center .fa-circle-play:hover{
-    transform: scale(1.3);
-    color: var(--color-border);
-}
-
-.col-gray:hover{
-    color: var(--white-color);
-}
-
-.img-card:hover img{
-    position: relative;
-    filter: opacity(50%);
-}
-
-.img-card:hover i{
-    display: block;
-    color: var(--white-color);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    /*INIZIO MEDIA QUERY*/
+                   /*INIZIO MEDIA QUERY*/
 
 /*XS*/
 @media screen and (min-width:300px) and (max-width:575px){
@@ -681,6 +531,10 @@ span{
         display: block;
     }
 
+    .sidebar-playlist ul{
+        overflow-y: auto;
+    }
+
 }
 
 /*MD*/
@@ -716,9 +570,10 @@ span{
         flex-direction: column;
     }
 
-    .over-flo{
-        overflow: scroll;
+    .sidebar-playlist ul{
+        overflow-y: auto;
     }
+
     
 }
 
@@ -743,5 +598,263 @@ span{
     .content{
         width: 82%;
     }
+    
+    .sidebar-playlist ul{
+        overflow-y: auto;
+    }
 
 }
+
+
+/*REGOLE HOVER*/
+
+/*REGOLE HOVER SIDERBAR*/
+
+.sidebar li:hover{
+    color: var(--white-color);
+}
+
+.sidebar span:hover{
+    color: var(--white-color);
+}
+
+.sidebar-playlist .square:hover{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.bord-green-hov:hover{
+    border-left: 2px solid var(--color-border) !important;
+}
+
+/*REGOLE HOVER CONTENT*/
+
+.btn-black:hover{
+    opacity: 0.4;
+}
+
+.side-content li a:hover{
+    color: var(--white-color);
+}
+
+.side-content li:hover .border4{
+    background-color: var(--color-border);
+}
+
+
+/*REGOLE HOVER FOOTER*/
+
+.border:hover .border-backcol{
+    background-color: var(--color-border);
+    animation: progres 4s linear;
+}
+
+.border:hover .ball-border{
+    background-color: var(--color-border);
+    display: block;
+}
+
+.border2:hover .border-backcol{
+    background-color: var(--color-border);
+    animation: progres 6s linear;
+}
+
+.border2:hover .ball-border{
+    background-color: var(--color-border);
+    display: block;
+}
+
+.foot-center .fa-circle-play:hover{
+    transform: scale(1.3);
+    color: var(--color-border);
+
+}
+
+.col-gray:hover{
+    color: var(--white-color);
+}
+
+.img-card:hover img{
+    position: relative;
+    filter: opacity(50%);
+}
+
+.img-card:hover i{
+    display: block;
+    color: var(--white-color);
+}
+
+/*INIZIO ANIMAZIONI*/
+
+
+.wobble-hor-bottom:hover {
+	-webkit-animation: wobble-hor-bottom 4s both;
+	        animation: wobble-hor-bottom 4s both;
+} 
+
+ @-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+  .heartbeat:hover {
+	-webkit-animation: heartbeat 3s ease-in-out infinite both;
+	        animation: heartbeat 3s ease-in-out infinite both;
+}
+
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+  
+  @keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+ 
