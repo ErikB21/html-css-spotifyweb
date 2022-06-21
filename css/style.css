@@ -68,7 +68,7 @@
 /*REGOLE MAIN CONTENT*/
 
 .main-container{
-    height: 88vh;
+    height: calc(100vh - 80px);
     background-color: var(--black-color);
 }
 
@@ -76,7 +76,7 @@
 .main-container .content{
     width: 100%;
     background-color: var(--primary-color);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .main-container .content .nav-section{
@@ -195,6 +195,7 @@ span{
 
 .main-container .sidebar{
     width: 18%;
+    height: calc(100% - 80px);
     flex-shrink: 0;
     background-color: var(--black-color);
 }
@@ -272,7 +273,7 @@ span{
     padding-left: 0.5rem;
     margin-top: 0.7rem;
     color: var(--text-color-gray);
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 .sidebar-playlist h2{
@@ -291,12 +292,11 @@ span{
 }
 
 .sidebar-bottom{
-    margin:0 1rem 1rem 0.5rem;
-    position: fixed;
+    height: 5px;
+    margin:0 1rem 1rem 0;
+    position: sticky;
     z-index: 990;
     bottom: 0%;
-    left: 0%;
-    padding-bottom: 3rem;
     background-color: var(--black-color);
 }
 
@@ -315,7 +315,7 @@ span{
 
 
 .nav-footer{
-    min-height: 12vh;
+    height: 80px;
     background-color: var(--color-foot);
     position: fixed;
     bottom: 0;
