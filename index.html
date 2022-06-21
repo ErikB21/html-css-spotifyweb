@@ -17,18 +17,16 @@
                 
                 <div class="sidebar flex column-dir">
                     <div class="sidebar-logo">
+                        <div class="logo-spot text-block flex column-dir">
+                            <img src="img/logo.svg" alt="logo">
+                        </div>
+                        <div class="logo-none disp-no">
+                            <img src="img/logo-small.svg" alt="logo small">
+                        </div>
+                    </div>
+                
+                    <div class="sidebar-center">
                         <ul class="flex column-dir">
-
-                            <li class="logo-spot text-block">
-                                <img src="img/logo.svg" alt="logo">
-                            </li>
-
-                            <li class="logo-none disp-no">
-                                <div class="icon-logo">
-                                    <img src="img/logo-small.svg" alt="logo small">
-                                </div>
-                            </li>
-
                             <li class="flex items-center bord-green">
                                 <div class="icon-logo">
                                     <img class="image-block" src="img/home.svg" alt="home">
@@ -38,7 +36,7 @@
                                 </div>
                             </li>
 
-                            <li class="flex items-center">
+                            <li class="flex items-center bord-green-hov">
                                 <div class="icon-logo">
                                     <img class="image-block" src="img/search.svg" alt="search">
                                 </div>
@@ -47,7 +45,7 @@
                                 </div>
                             </li>
 
-                            <li class="flex items-center">
+                            <li class="flex items-center bord-green-hov">
                                 <div class="icon-logo">
                                     <img class="image-block" src="img/libreria.svg" alt="libreria">
                                 </div>
@@ -55,18 +53,23 @@
                                     <span>La tua libreria</span>
                                 </div>  
                             </li>
+                        </ul>
+                    </div>
 
-                            <li class="text-block">
-                                <h4 class="col-white">PLAYLIST</h4>
-                            </li>
+                    <div class="sidebar-playlist flex column-dir">
 
-                            <li class="flex items-center text-block">
-                                <div class="square">
-                                    <i class="fa-solid fa-plus"></i>
-                                </div>
-                                <span>Crea Playlist</span>
-                            </li>
+                        <h2 class="text-block col-white">PLAYLIST</h2>
+                        
 
+                        <div class="add-playlist flex items-center text-block">
+                            <div class="square">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <span>Crea Playlist</span>
+                        </div>
+
+
+                        <ul class="flex column-dir">
                             <li class="text-block">Nome Playlist</li>
                             <li class="text-block">Nome Playlist</li>
                             <li class="text-block">Nome Playlist</li>
@@ -77,25 +80,25 @@
                         </ul>
                     </div>
 
-                    <div class="sidebar-bottom text-block flex">
-                        <ul class="flex column-dir">
-                            <li class="flex bord-bot">
-                                <div class="icon-logo21">
-                                </div>
-                                <div>
-                                    <span>Installa App</span>
-                                </div>
-                            </li>
+                    <div class="sidebar-bottom text-block flex column-dir">
 
-                            <li class="flex text-bott">
-                                <div class="icon-logo2">
-                                    <img src="img/1649087061240.svg" alt="profile">
-                                </div>
-                                <div class="col-white">
-                                    <h3>Erik</h3>
-                                </div>
-                            </li>
-                        </ul>
+                        <section class="flex bord-bot">
+                            <div class="icon-logo2">
+                                <img src="img/download.svg" alt="">
+                            </div>
+                            <div>
+                                <span>Installa App</span>
+                            </div>
+                        </section>
+
+                        <section class="flex text-bott">
+                            <div class="icon-logo3">
+                                <img src="img/1649087061240.svg" alt="profile">
+                            </div>
+                            <div class="col-white">
+                                <h3>Erik</h3>
+                            </div>
+                        </section>
                     </div>
 
                 </div>
@@ -243,7 +246,7 @@
         <footer>
             <section class="nav-footer flex">
 
-                <div class="foot-top flex">
+                <div class="foot-top flex justy-cont-space">
                     <div class="box-footer flex">
                         <div class="image-footer">
                             <img src="img/FB_IMG_1495197518456.jpg" alt="Nerone-Basta">
